@@ -146,6 +146,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DivingState.h" />
+    <ClInclude Include="DuckingState.h" />
+    <ClInclude Include="Heroine.h" />
+    <ClInclude Include="HeroineState.h" />
+    <ClInclude Include="JumpingState.h" />
+    <ClInclude Include="StandingState.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DivingState.cpp" />
+    <ClCompile Include="DuckingState.cpp" />
+    <ClCompile Include="Heroine.cpp" />
+    <ClCompile Include="HeroineState.cpp" />
+    <ClCompile Include="JumpingState.cpp" />
+    <ClCompile Include="mainProc.cpp" />
+    <ClCompile Include="StandingState.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
