@@ -1,12 +1,16 @@
 #pragma once
-#include "HeroineState.h"
+#include"DuckingState.h"
+#include"JumpingState.h"
+#include<assert.h>
+
 class CStandingState :
 	public CHeroineState
 {
 public:
 	CStandingState();
 	virtual ~CStandingState();
-	virtual void handleInput(CHeroine& heroine, Input input);
+	virtual CHeroineState* handleInput(CHeroine& heroine, int input);
+	// 서있는 상태에서 히로인이 할일.
 	virtual void update(CHeroine& heroine);
 };
 

@@ -11,12 +11,14 @@ CDivingState::~CDivingState()
 {
 }
 
-void CDivingState::handleInput(CHeroine & heroine, Input input)
+CHeroineState* CDivingState::handleInput(CHeroine & heroine, int input)
 {
 	if (input == RELEASE_DOWN)
 	{
 		heroine.setGraphics(IMAGE_STAND);
+		return new CStandingState();
 	}
+	return nullptr;
 }
 
 void CDivingState::update(CHeroine & heroine)

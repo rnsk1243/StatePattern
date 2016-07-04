@@ -1,12 +1,13 @@
 #pragma once
-#include "HeroineState.h"
+#include"StandingState.h"
+
 class CDivingState :
 	public CHeroineState
 {
 public:
 	CDivingState();
 	virtual ~CDivingState();
-	virtual void handleInput(CHeroine& heroine, Input input);
+	virtual CHeroineState* handleInput(CHeroine& heroine, int input);
 	virtual void update(CHeroine& heroine);
 };
 

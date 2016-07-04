@@ -11,12 +11,14 @@ CJumpingState::~CJumpingState()
 {
 }
 
-void CJumpingState::handleInput(CHeroine & heroine, Input input)
+CHeroineState* CJumpingState::handleInput(CHeroine & heroine, int input)
 {
 	if (input == PRESS_DOWN)
 	{
 		heroine.setGraphics(IMAGE_DIVE);
+		return new CDivingState();
 	}
+	return nullptr;
 }
 
 void CJumpingState::update(CHeroine & heroine)

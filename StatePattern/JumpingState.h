@@ -1,12 +1,12 @@
 #pragma once
-#include "HeroineState.h"
+#include"DivingState.h"
 class CJumpingState :
 	public CHeroineState
 {
 public:
 	CJumpingState();
 	virtual ~CJumpingState();
-	virtual void handleInput(CHeroine& heroine, Input input);
+	virtual CHeroineState* handleInput(CHeroine& heroine, int input);
 	virtual void update(CHeroine& heroine);
 };
 
