@@ -17,7 +17,7 @@ CHeroineState* CDuckingState::handleInput(CHeroine & heroine, int input)
 	if (input == RELEASE_DOWN)
 	{
 		// 서있는 이미지로 상태를 바꾼다.
-		heroine.setGraphics(IMAGE_STAND);
+		//heroine.setGraphics(IMAGE_STAND);
 		// 서있게 되면 차지타임 초기화
 		m_chargeTime = 0;
 		// 엎드리기 해제 명령에의해서 서있는 상태  객체를 만들어 그 주소를 리턴함.
@@ -38,4 +38,9 @@ void CDuckingState::update(CHeroine & heroine)
 		// 발동후 다시 0으로.
 		m_chargeTime = 0;
 	}
+}
+
+void CDuckingState::enter(CHeroine & heroine)
+{
+	heroine.setGraphics(IMAGE_DUCK);
 }

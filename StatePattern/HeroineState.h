@@ -21,5 +21,6 @@ public:
 	virtual CHeroineState* handleInput(CHeroine& heroine, int input) { return nullptr; }
 	// handleInput과 마찬가지
 	virtual void update(CHeroine& heroine) {}
+	virtual void enter(CHeroine& heroine) {}
 };
 

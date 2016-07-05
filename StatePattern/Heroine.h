@@ -53,7 +53,12 @@ class CHeroineState 해주어야 하는 경우는 전혀 상관없는 객체를 맴버변수로 가져와�
 class CHeroine
 {
 	// 현재 상태객체의 주소를 담아서 가리키는 변수 선언
+	// 무엇을 하는가에 대한 상태기계
 	CHeroineState * m_state;
+	// 또 다른 상태기계는 여기에 또 추가하면 된다.
+	// 여기
+	// CHeroineState * m_또다른상태기계;
+	//
 public:
 	CHeroine();
 	~CHeroine();
@@ -66,6 +71,6 @@ public:
 	// 현제 상태 객체를 가리키는 주소 가져옴
 	CHeroineState* getState() { return m_state; }
 	// 입력에 따라 상태 객체의 주소를 가리키는 객체 주소를 반환 함.
-	CHeroineState* handleInput(Input input);
+	void handleInput(Input input);
 };
 

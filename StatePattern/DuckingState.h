@@ -19,6 +19,7 @@ public:
 	virtual CHeroineState* handleInput(CHeroine& heroine, int input);
 	// 엎드린 상태에서 히로인이 할 일 정의
 	virtual void update(CHeroine& heroine);
-
+	//
+	virtual void enter(CHeroine& heroine);
 };
 
