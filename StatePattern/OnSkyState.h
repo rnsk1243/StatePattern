@@ -1,5 +1,6 @@
 #pragma once
 #include"HeroineState.h"
+#include"test.h"
 
 class COnSkyState :
 	public CHeroineState
