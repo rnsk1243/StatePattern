@@ -1,7 +1,8 @@
 #pragma once
-#include"DivingState.h"
+#include"OnSkyState.h"
+
 class CJumpingState :
-	public CHeroineState
+	public COnSkyState
 {
 public:
 	CJumpingState();

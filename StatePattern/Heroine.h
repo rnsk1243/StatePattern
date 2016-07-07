@@ -1,7 +1,6 @@
 #pragma once
 #include<iostream>
 using namespace std;
-#include"HeroineState.h"
 
 enum State
 {

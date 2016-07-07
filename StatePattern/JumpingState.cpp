@@ -1,7 +1,6 @@
 #include "JumpingState.h"
 
 
-
 CJumpingState::CJumpingState()
 {
 }
@@ -13,12 +12,21 @@ CJumpingState::~CJumpingState()
 
 CHeroineState* CJumpingState::handleInput(CHeroine & heroine, int input)
 {
-	if (input == PRESS_DOWN)
+	/*
+	if (input == 특별공격키)
 	{
 		//heroine.setGraphics(IMAGE_DIVE);
-		return new CDivingState();
+		//return new CDivingState();
+		// 공중 상태이고 점프상태일때만 할 수 있는 특별 상태는 여기에
 	}
-	return nullptr;
+	else
+	{
+		return COnSkyState::handleInput(heroine, input);
+	}
+	*/
+	cout << "점프상태!!!!!!!!!!." << endl;
+	return COnSkyState::handleInput(heroine, input);
+	
 }
 
 void CJumpingState::update(CHeroine & heroine)
