@@ -155,6 +155,7 @@
     <ClInclude Include="OnGroundState.h" />
     <ClInclude Include="OnSkyState.h" />
     <ClInclude Include="StandingState.h" />
+    <ClInclude Include="StateStack.h" />
     <ClInclude Include="UnderGround.h" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +169,7 @@
     <ClCompile Include="OnGroundState.cpp" />
     <ClCompile Include="OnSkyState.cpp" />
     <ClCompile Include="StandingState.cpp" />
+    <ClCompile Include="StateStack.cpp" />
     <ClCompile Include="UnderGround.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
