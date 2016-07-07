@@ -24,7 +24,7 @@ CHeroineState* CJumpingState::handleInput(CHeroine & heroine, int input)
 		return COnSkyState::handleInput(heroine, input);
 	}
 	*/
-	cout << "점프상태!!!!!!!!!!." << endl;
+	//cout << "점프상태!!!!!!!!!!." << endl;
 	return COnSkyState::handleInput(heroine, input);
 	
 }
