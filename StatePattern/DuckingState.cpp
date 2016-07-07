@@ -21,10 +21,11 @@ CHeroineState* CDuckingState::handleInput(CHeroine & heroine, int input)
 		// 서있게 되면 차지타임 초기화
 		m_chargeTime = 0;
 		// 엎드리기 해제 명령에의해서 서있는 상태  객체를 만들어 그 주소를 리턴함.
+		cout << "DuckingState : 엎드리기 해제" << endl;
 		return new CStandingState();
 	}
 	else {
-		return COnGroundState::handleInput(heroine, input);
+		return CUnderGround::handleInput(heroine, input);
 	}
 	// 엎드리기 해제 명령 이외의 명력은 다 nullptr을 리턴하여 상태를 바꾸지 않고 유지함.
 	//return nullptr;
@@ -34,6 +35,7 @@ CHeroineState* CDuckingState::handleInput(CHeroine & heroine, int input)
 void CDuckingState::update(CHeroine & heroine)
 {
 	// 엎드린상태에서는 충전량이 증가한다.
+	cout << "궁극기 충전중... : " << m_chargeTime << endl;
 	m_chargeTime++;
 	if (m_chargeTime > MAX_CHARGE) {
 		// 특별기술 발동!
@@ -45,5 +47,6 @@ void CDuckingState::update(CHeroine & heroine)
 
 void CDuckingState::enter(CHeroine & heroine)
 {
+	cout << "궁극기를 충전 합니다." << endl;
 	heroine.setGraphics(IMAGE_DUCK);
 }

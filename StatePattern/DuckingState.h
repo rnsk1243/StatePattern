@@ -5,10 +5,10 @@
 // 다른 상태 객체와 다른 점은 필드에 int형의 멤버변수가 존재 한다.
 #include "HeroineState.h"
 #include"StandingState.h"
-#include"OnGroundState.h"
+#include"UnderGround.h"
 
 class CDuckingState :
-	public COnGroundState
+	public CUnderGround
 {
 	// 엎드린 상태로 전환 뒤에 충전 시간.
 	// 스레드에 의해 update메소드가 호출되어 증가한다.

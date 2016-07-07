@@ -28,7 +28,7 @@ CHeroineState* CDivingState::handleInput(CHeroine & heroine, int input)
 	}
 	*/
 
-	return COnSkyState::handleInput(heroine, input);
+	return CMiddle::handleInput(heroine, input);
 	
 }
 

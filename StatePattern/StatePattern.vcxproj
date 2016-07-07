@@ -151,11 +151,13 @@
     <ClInclude Include="Heroine.h" />
     <ClInclude Include="HeroineState.h" />
     <ClInclude Include="JumpingState.h" />
+    <ClInclude Include="Middle.h" />
     <ClInclude Include="OnGroundState.h" />
     <ClInclude Include="OnSkyState.h" />
     <ClInclude Include="StandingState.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="test2.h" />
+    <ClInclude Include="UnderGround.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DivingState.cpp" />
@@ -164,11 +166,13 @@
     <ClCompile Include="HeroineState.cpp" />
     <ClCompile Include="JumpingState.cpp" />
     <ClCompile Include="mainProc.cpp" />
+    <ClCompile Include="Middle.cpp" />
     <ClCompile Include="OnGroundState.cpp" />
     <ClCompile Include="OnSkyState.cpp" />
     <ClCompile Include="StandingState.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="test2.cpp" />
+    <ClCompile Include="UnderGround.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
