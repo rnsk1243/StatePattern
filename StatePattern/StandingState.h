@@ -1,10 +1,9 @@
 #pragma once
-#include"DuckingState.h"
-#include"JumpingState.h"
 #include<assert.h>
+#include"OnGroundState.h"
 
 class CStandingState :
-	public CHeroineState
+	public COnGroundState
 {
 public:
 	CStandingState();

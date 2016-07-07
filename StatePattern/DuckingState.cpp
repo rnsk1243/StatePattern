@@ -23,8 +23,11 @@ CHeroineState* CDuckingState::handleInput(CHeroine & heroine, int input)
 		// 엎드리기 해제 명령에의해서 서있는 상태  객체를 만들어 그 주소를 리턴함.
 		return new CStandingState();
 	}
+	else {
+		return COnGroundState::handleInput(heroine, input);
+	}
 	// 엎드리기 해제 명령 이외의 명력은 다 nullptr을 리턴하여 상태를 바꾸지 않고 유지함.
-	return nullptr;
+	//return nullptr;
 	//return NULL;  이렇게 해도 된다.
 }
 

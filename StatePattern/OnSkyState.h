@@ -1,12 +1,13 @@
 #pragma once
-#include"OnSkyState.h"
+#include"HeroineState.h"
+#include"test.h"
 
-class CDivingState :
-	public COnSkyState
+class COnSkyState :
+	public CHeroineState
 {
 public:
-	CDivingState();
-	virtual ~CDivingState();
+	COnSkyState();
+	virtual ~COnSkyState();
 	virtual CHeroineState* handleInput(CHeroine& heroine, int input);
 	virtual void update(CHeroine& heroine);
 	virtual void enter(CHeroine& heroine);
