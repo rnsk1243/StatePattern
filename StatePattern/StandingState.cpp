@@ -1,7 +1,7 @@
 #include "StandingState.h"
 #include"JumpingState.h"
 
-CStandingState::CStandingState()
+CStandingState::CStandingState():m_isChangeState(true)
 {
 }
 
@@ -27,7 +27,8 @@ CHeroineState* CStandingState::handleInput(CHeroine & heroine, int input)
 		return COnGroundState::handleInput(heroine, input);
 	}
 	*/
-
+	// 서있는 상태라면 바로 다음 상태로 갈 수 있다.
+	m_isChangeState = true;
 	return COnGroundState::handleInput(heroine, input);
 
 
@@ -38,9 +39,11 @@ void CStandingState::update(CHeroine & heroine)
 	//cout << "Idle 동작중..." << endl;
 	// 서있는 이미지...
 	heroine.setGraphics(IMAGE_STAND);
+	m_isChangeState = true;
 }
 
 void CStandingState::enter(CHeroine & heroine)
 {
+	//cout << "스탠딩 enter 호출" << endl;
 	heroine.setGraphics(IMAGE_STAND);
 }

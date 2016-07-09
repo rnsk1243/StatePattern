@@ -28,12 +28,3 @@ CHeroineState * COnGroundState::handleInput(CHeroine & heroine, int input)
 	return nullptr;
 }
 
-void COnGroundState::update(CHeroine & heroine)
-{
-	cout << "OnGroundState의 update 메소드 입니다." << endl;
-}
-
-void COnGroundState::enter(CHeroine & heroine)
-{
-	cout << "OnGroundState의 enter 메소드 입니다." << endl;
-}

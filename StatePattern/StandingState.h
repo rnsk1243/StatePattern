@@ -5,6 +5,7 @@
 class CStandingState :
 	public COnGroundState
 {
+	bool m_isChangeState;
 public:
 	CStandingState();
 	virtual ~CStandingState();
@@ -13,6 +14,8 @@ public:
 	virtual void update(CHeroine& heroine);
 	// ¿‘¿Â
 	virtual void enter(CHeroine& heroine);
-
+	virtual bool getIsChangeState() {
+		//cout << "Ω∫≈ƒµ˘ getIsChangeState" << endl;
+		return m_isChangeState; }
 };
 

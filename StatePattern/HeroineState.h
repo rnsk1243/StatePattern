@@ -22,5 +22,7 @@ public:
 	// handleInput과 마찬가지
 	virtual void update(CHeroine& heroine) {}
 	virtual void enter(CHeroine& heroine) {}
+	// 
+	virtual bool getIsChangeState() { return nullptr; }
 };
 

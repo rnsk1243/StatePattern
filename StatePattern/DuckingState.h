@@ -13,14 +13,16 @@ class CDuckingState :
 	// 엎드린 상태로 전환 뒤에 충전 시간.
 	// 스레드에 의해 update메소드가 호출되어 증가한다.
 	int m_chargeTime;
+	bool m_isChangeState;
 public:
 	CDuckingState();
 	virtual ~CDuckingState();
 	// input명령에 따른 상태 객체를 새로 만들어서 만들어진 주소를 반환함.
 	virtual CHeroineState* handleInput(CHeroine& heroine, int input);
-	// 엎드린 상태에서 히로인이 할 일 정의
+	// 엎드린 상태에서 히로인이 지속적으로 할 일 정의
 	virtual void update(CHeroine& heroine);
-	//
+	// 상태가 바뀌자마자 할 일
 	virtual void enter(CHeroine& heroine);
+	virtual bool getIsChangeState() { return m_isChangeState; }
 };
 

@@ -1,8 +1,10 @@
 #pragma once
 #include "HeroineState.h"
+
 class CUnderGround :
 	public CHeroineState
 {
+
 public:
 	CUnderGround();
 	virtual ~CUnderGround();
